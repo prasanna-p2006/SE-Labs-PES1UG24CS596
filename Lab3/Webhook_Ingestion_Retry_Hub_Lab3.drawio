@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0">
+  <diagram id="ps49-component-diagram" name="Component Diagram - PS49">
+    <mxGraphModel dx="1471" dy="810" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;" value="UML Component Diagram" vertex="1">
+          <mxGeometry height="30" width="920" x="240" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="title2" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;" value="Problem Statement #49 - Webhook Ingestion &amp; Retry Mechanism Hub" vertex="1">
+          <mxGeometry height="24" width="920" x="240" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;width=340;height=30;fontSize=12;fontStyle=1;align=left;verticalAlign=top;fillColor=#ffffff;strokeColor=#000000;" value="Webhook Ingestion &amp; Retry Mechanism Hub" vertex="1">
+          <mxGeometry height="540" width="920" x="240" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="flowLabel" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=9;fontStyle=2;fontColor=#666666;" value="Primary webhook processing flow" vertex="1">
+          <mxGeometry height="20" width="1040" x="280" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="comp1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shape=component;align=center;verticalAlign=middle;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Webhook Ingestion Service" vertex="1">
+          <mxGeometry height="60" width="160" x="280" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="comp2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shape=component;align=center;verticalAlign=middle;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Validation Service" vertex="1">
+          <mxGeometry height="60" width="160" x="520" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="comp3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shape=component;align=center;verticalAlign=middle;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Delivery / Forwarding Service" vertex="1">
+          <mxGeometry height="60" width="160" x="760" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="comp4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shape=component;align=center;verticalAlign=middle;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Retry Manager" vertex="1">
+          <mxGeometry height="60" width="160" x="760" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="comp5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shape=component;align=center;verticalAlign=middle;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Dead-Letter Queue" vertex="1">
+          <mxGeometry height="60" width="160" x="760" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="comp6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shape=component;align=center;verticalAlign=middle;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Logging Service" vertex="1">
+          <mxGeometry height="60" width="160" x="520" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="comp7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shape=component;align=center;verticalAlign=middle;fontSize=11;fillColor=#ffffff;strokeColor=#000000;" value="&lt;&lt;component&gt;&gt;&lt;br&gt;Monitoring &amp; Integration&lt;br&gt;Management Service" vertex="1">
+          <mxGeometry height="60" width="180" x="280" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="archLabel" parent="1" style="text;html=1;align=right;verticalAlign=top;fontSize=10;fontStyle=2;fontColor=#666666;" value="Architecture: Microservices" vertex="1">
+          <mxGeometry height="20" width="190" x="960" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="retryNote" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=10;fontStyle=2;" value="Backoff schedule:&lt;br&gt;1s -&gt; 2s -&gt; 4s -&gt; 8s" vertex="1">
+          <mxGeometry height="40" width="190" x="940" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="extProvider" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;align=center;verticalAlign=middle;" value="&lt;&lt;external system&gt;&gt;&lt;br&gt;External Webhook Provider" vertex="1">
+          <mxGeometry height="50" width="160" x="40" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="extTarget" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;align=center;verticalAlign=middle;" value="&lt;&lt;external system&gt;&gt;&lt;br&gt;Internal Target Service" vertex="1">
+          <mxGeometry height="50" width="160" x="1200" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="devActor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;html=1;outlineConnect=0;fontSize=10;" value="Integration Developer" vertex="1">
+          <mxGeometry height="80" width="40" x="80" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="opActor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;html=1;outlineConnect=0;fontSize=10;" value="System Operator" vertex="1">
+          <mxGeometry height="80" width="40" x="80" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fontSize=10;fillColor=#ffffff;strokeColor=#999999;" value="Legend&lt;br&gt;&amp;#9675; Provided interface&lt;br&gt;&amp;#9686; Required interface&lt;br&gt;----- Dependency / connector&lt;br&gt;[[ ]] Component" vertex="1">
+          <mxGeometry height="100" width="220" x="40" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="extProvider" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;labelBackgroundColor=#ffffff;strokeColor=#000000;startArrow=halfCircle;startFill=0;startSize=14;endArrow=circle;endFill=0;endSize=14;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="comp1" value="Webhook Ingestion API">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="comp1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;labelBackgroundColor=#ffffff;strokeColor=#000000;startArrow=halfCircle;startFill=0;startSize=14;endArrow=circle;endFill=0;endSize=14;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="comp2" value="Validation API">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="comp2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;labelBackgroundColor=#ffffff;strokeColor=#000000;startArrow=halfCircle;startFill=0;startSize=14;endArrow=circle;endFill=0;endSize=14;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="comp3" value="Delivery API">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="comp3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;labelBackgroundColor=#ffffff;strokeColor=#000000;startArrow=halfCircle;startFill=0;startSize=14;endArrow=circle;endFill=0;endSize=14;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="comp4" value="Retry Management Interface">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="comp4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;labelBackgroundColor=#ffffff;strokeColor=#000000;startArrow=halfCircle;startFill=0;startSize=14;endArrow=circle;endFill=0;endSize=14;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="comp5" value="DLQ Storage Interface">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="comp1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;labelBackgroundColor=#ffffff;strokeColor=#000000;startArrow=halfCircle;startFill=0;startSize=14;endArrow=circle;endFill=0;endSize=14;exitX=0.5;exitY=1;entryX=0;entryY=0;" target="comp6" value="Logging API">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="comp3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;labelBackgroundColor=#ffffff;strokeColor=#000000;startArrow=halfCircle;startFill=0;startSize=14;endArrow=circle;endFill=0;endSize=14;exitX=0;exitY=1;entryX=1;entryY=0.3;" target="comp7" value="Monitoring API">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="comp4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;strokeColor=#999999;exitX=0;exitY=0.5;entryX=1;entryY=0.7;" target="comp7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11b" edge="1" parent="1" source="comp1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;dashed=1;strokeColor=#999999;exitX=0;exitY=1;entryX=1;entryY=0.1;" target="comp7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="devActor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;labelBackgroundColor=#ffffff;strokeColor=#000000;startArrow=halfCircle;startFill=0;startSize=14;endArrow=circle;endFill=0;endSize=14;exitX=1;exitY=0.3;entryX=0;entryY=0.3;" target="comp7" value="Integration Configuration API">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="opActor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=halfCircle;startFill=0;startSize=14;endArrow=circle;endFill=0;endSize=14;strokeColor=#000000;exitX=1;exitY=0.7;entryX=0;entryY=0.7;" target="comp7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="comp3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;labelBackgroundColor=#ffffff;strokeWidth=2;strokeColor=#000000;startArrow=halfCircle;startFill=0;startSize=14;endArrow=circle;endFill=0;endSize=14;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="extTarget" value="Webhook Delivery API">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
